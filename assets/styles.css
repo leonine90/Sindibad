@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.table-cell-responsive {
+  @apply border px-4 py-2 block border-y-white md:border-y-neutral-100 md:border-b-neutral-200 md:table-cell;
+}
+
+.before-label {
+  @apply before:font-bold before:content-[attr(data-label)] md:before:content-[];
+}
