@@ -2,7 +2,7 @@
   <div>
     <ControlBar
       :searchQuery="searchQuery"
-      :sorting="sortOptions"
+      :sorting="sorting"
       @searchQueryChange="$emit('searchQueryChange', $event)"
       @sortChange="$emit('sortChange', $event)"
     />
@@ -66,11 +66,6 @@ const props = defineProps({
   },
 });
 const emit = defineEmits(['pageChange', 'searchQueryChange', 'sortChange', 'pageSizeChange']);
-
-const sortOptions = [
-  { key: 'name', label: 'Name' },
-  { key: 'date', label: 'Date' },
-];
 
 function highlight(text) {
   return highlightText(text, props.searchQuery);

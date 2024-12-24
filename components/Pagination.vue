@@ -8,7 +8,7 @@
       >
         Previous
       </button>
-      <span>Page {{ pagination.currentPage }} of {{ pagination.totalPages }}</span>
+      <span class="font-bold">Page {{ pagination.currentPage }} of {{ pagination.totalPages }}</span>
       <button
         class="border p-2 rounded disabled:text-neutral-300"
         :disabled="pagination.currentPage === pagination.totalPages"
@@ -18,7 +18,7 @@
       </button>
     </div>
     <div class="flex justify-between items-center mt-4 p-2 bg-neutral-100">
-      <label for="pagesize">Page Size:</label>
+      <label class="font-bold" for="pagesize">Page Size:</label>
       <select name='pagesize' class="border p-2 ml-4" v-model="localPageSize" @change="updatePageSize">
         <option :value="5">5</option>
         <option :value="10" selected>10</option>

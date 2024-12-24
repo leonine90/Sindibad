@@ -60,6 +60,7 @@ export function useUserData(users) {
 
   function setSearchQuery(query) {
     searchQuery.value = query;
+    pagination.value.currentPage = 1;
   }
 
   function setSort({ key, order }) {

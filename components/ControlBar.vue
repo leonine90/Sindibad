@@ -9,7 +9,7 @@
     />
 
     <div class="flex gap-4 p-2 md:max-w-[33%] mt-2 md:mt-0">
-      Sort By:
+      <span class="font-bold">Sort By:</span>
       <div v-for="sort in localSorting" :key="sort.key">
         <span @click="toggleSort(sort.key)" class="cursor-pointer">
           {{ sort.label }}
@@ -23,8 +23,6 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from 'vue';
-
 const props = defineProps({
   searchQuery: {
     type: String,
