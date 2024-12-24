@@ -75,6 +75,7 @@ export function useUserData(users) {
     } else {
       sorting.value.splice(existingIndex, 1);
     }
+    pagination.value.currentPage = 1;
   }
 
   function setPage(newPage) {
